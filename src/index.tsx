@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
 import CardProduct from "./pages/CardProduct";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
-    path: "/",
+    path: "/*",
     element: <App />,
     children: [
       {
@@ -21,7 +21,6 @@ const router = createBrowserRouter([
         path: "/:code",
         element: <CardProduct />,
       },
-      
     ],
   },
   {
