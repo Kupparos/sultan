@@ -1,0 +1,20 @@
+.breadCrumbs{
+   margin: 35px 0 25px;
+}
+
+.breadCrumbs span a{
+   line-height: 1.2;
+   font-size: 14px;
+   font-weight: 200;
+   color: #3f4e65;
+}
+
+.breadCrumbs > span:last-child a{
+   color: rgba(63, 78, 101, 0.5);
+}
+
+.breadCrumbs span:not(:last-of-type) {
+   padding-right: 10px;
+   margin-right: 10px;
+   border-right: 1px dashed rgb(0, 0, 0, 5%);
+ }

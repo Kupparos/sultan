@@ -1,0 +1,306 @@
+.catalog{
+  background-color: #ffffff;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1366px;
+}
+
+.title h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 20px 0;
+  color: #111111;
+}
+
+.sort_by {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sort_by select {
+  border: none;
+  color: #3f4e65;
+  font-weight: 400;
+  width: 100px;
+  line-height: 1.5;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+.sort_by select option {
+  line-height: 2.5;
+  cursor: pointer;
+}
+
+.tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  min-height: 65px;
+  gap: 10px;
+}
+
+.tag {
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.044);
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  color: #3f4e65;
+  font-size: 14px;
+}
+
+.tag_active {
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.044);
+  background-color: transparent;
+  border: 1px solid #ffc85e;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  color: #3f4e65;
+  font-size: 14px;
+}
+
+.main {
+  display: flex;
+  gap: 5%;
+  margin: 30px 0;
+}
+
+.filter {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter_title{
+  display: flex;
+  align-items: center;
+}
+
+.filter_title h2{
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.filter_title_button{
+  display: none;
+  background-color: rgba(255, 202, 101, 0.5);
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  color: rgba(63, 78, 101, 1);
+  border: none;
+}
+
+.price p{
+  line-height: 1.5;
+  font-size: 14px;
+  color: #3f4e65;
+}
+
+.price p span{
+  color: #111111;
+  font-weight: 600;
+}
+
+.price_range{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price_range input{
+  border: none;
+  background-color: rgba(255, 198, 80, 0.3);
+  width: 100px;
+  height: 23px;
+  border-radius: 1000px;
+  font-size: 12px;
+  color: #3f4e65;
+  text-align: center;
+}
+
+.price_range input::placeholder {
+  text-align: center;
+}
+
+.manufacturer p{
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.search {
+  background-color: #ededed;
+  width: 100%;
+  height: 59px;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search input {
+  border: none;
+  background-color: transparent;
+  height: 30px;
+  padding: 13px;
+  width: 150px;
+}
+
+.search button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #ffc85e;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.checkName{
+  margin: 20px 0;
+}
+
+.checkName input{
+  margin: 7px;
+}
+
+.checkName label{
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3f4e65;
+}
+
+.checkName label span{
+  font-size: 10px;
+}
+
+.checkName button{
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 12px;
+  border: none;
+  color: #3f4e65;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.tags_side{
+  display: flex;
+  flex-direction: column;
+}
+
+.card_list{
+  width: calc(95% - 240px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  max-width: 1058px;
+}
+
+/* ------------ PAGINATION --------------- */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination li {
+  list-style: none;
+  margin-right: 10px;
+  border-radius: 50%; 
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #3f4e65;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li.active {
+  background-color: rgba(255, 198, 80, 0.3);
+}
+
+.pagination li.previous,
+.pagination li.next {
+  color: #FFC85E;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --------- MEDIA ---------- */
+
+@media screen and (max-width: 650px) {
+  .title{
+    flex-direction: column;
+    align-items: start;
+  }
+  .title h1{
+    font-size: 20px;
+    margin: 5px 0;
+  }
+  .sort_by p{
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  .tags{
+    display: none;
+  }
+  .main{
+    flex-direction: column;
+    margin: 0;
+  }
+  .filter{
+    width: 100%;
+    gap: 0;
+  }
+  .filter_title{
+    justify-content: space-between;
+  }
+  .filter_title_button{
+    display: block;
+  }
+  .price_range input{
+    width: 45%;
+  }
+  .search input{
+    width: 200px;
+  }
+  .card_list{
+    width: 100%;
+  }
+}
