@@ -12,4 +12,4 @@
 
 <h2>Link to GitHub Pages:</h2>
 
-<p>https://kupparos.github.io/sultan</p>
+<p>https://kupparos.github.io/sultan/</p>
