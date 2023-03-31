@@ -10,7 +10,7 @@ import CardProduct from "./pages/CardProduct";
 
 const router = createHashRouter([
   {
-    path: "/*",
+    path: "/",
     element: <App />,
     children: [
       {
