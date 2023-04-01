@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { CartContext } from "./context/cartContext";
 import { MenuContext } from "./context/menuContext";
-import CardProduct from "./pages/CardProduct";
-import Cart from "./pages/Cart";
-import Catalog from "./pages/Catalog";
 import { Product, CartItem } from "./types";
 
 function App() {
@@ -48,11 +45,7 @@ function App() {
         <div className="App">
           <Header />
           <div className={`overlay ${open ? "active" : ""}`}>
-            <Routes>
-              <Route path="/" element={<Catalog />} />
-              <Route path="/Корзина" element={<Cart />} />
-              <Route path="/:code" element={<CardProduct />} />
-            </Routes>
+            <Outlet />
             <Footer />
           </div>
         </div>
