@@ -9,7 +9,3 @@
 
 - npm i
 - npm start
-
-<h2>Link to GitHub Pages:</h2>
-
-<p>https://kupparos.github.io/sultan/</p>
