@@ -2,7 +2,7 @@
 
 <h2>Description:</h2>
 
-<p>Single-page application using react-select, react-paginate and React Router library</p>
+<p>Single-page application using css module, react-select, react-paginate and React Router library</p>
 
 <h2>How to start:</h2>
 
