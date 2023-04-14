@@ -63,7 +63,7 @@ export default function Admin() {
   }
 
   return (
-    <>
+    <div data-testid="admin-page">
       {isModalOpen && <EditModal product={currentProduct} closeModal={closeModal} setProducts={setProducts}/>}
       <h2 className={styles.title}>Products</h2>
       <div className={styles.create}>
@@ -126,6 +126,6 @@ export default function Admin() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

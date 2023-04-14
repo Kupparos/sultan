@@ -22,7 +22,7 @@ export default function Cart() {
   };
 
   return (
-    <div className={styles.cart}>
+    <div className={styles.cart} data-testid="cart-part">
       {isModalOpen && <OrderModal closeModal={closeModal} />}
       <div className="container">
         <div className={styles.bread_crumbs}>

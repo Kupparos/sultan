@@ -5,10 +5,22 @@ import styles from "../styles/cardProduct.module.css";
 import { sizeIcon } from "../utils";
 import { Product } from "../types";
 import { CartContext } from "../context/cartContext";
+import goodsFromJSON from "../goods.json";
+
+const productsFromLS = JSON.parse(localStorage.getItem("products") || "[]");
+const dataProducts = productsFromLS.length ? productsFromLS : goodsFromJSON;
 
 export default function CardProduct() {
   const location = useLocation();
-  const product: Product = location.state.item;
+  console.log(location);
+  const product: Product = location.state
+    ? location.state.item
+    : dataProducts.find(
+        (item: Product) => item.barcode === location.pathname.replace("/", "")
+      );
+
+      console.log(product);
+
   const { addItemToCart } = useContext(CartContext);
   const [count, setCount] = useState<number>(1);
 
@@ -24,7 +36,7 @@ export default function CardProduct() {
   };
 
   return (
-    <div className={styles.cart_product}>
+    <div className={styles.cart_product} data-testid="card-product-part">
       <div className="container">
         <div className={styles.bread_crumbs}>
           <BreadCrumbs />

@@ -92,7 +92,7 @@ export default function Catalog() {
   ]);
 
   return (
-    <div className={style.catalog}>
+    <div className={style.catalog} data-testid="catalog-part">
       <div className="container">
         <div className={style.bread_crumbs}>
           <BreadCrumbs />

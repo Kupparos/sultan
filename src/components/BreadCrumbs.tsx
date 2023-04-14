@@ -28,7 +28,7 @@ export default function BreadCrumbs() {
       </span>
       {breadcrumbs.map(({ name, path }, index) => (
         <span key={path}>
-          <Link to={path}>
+          <Link to={path} data-testid={name}>
             {location.state && index === breadcrumbs.length - 1
               ? location.state.item.name
               : name}
